@@ -7,22 +7,29 @@
 
     CREATE TABLE nombreTabla    
     (  
-        nombreColumna tipo,  
-        nombreColumna2 tipo,   
-        nombreColumna3 tipo,  
-        nombreColumna4 tipo  
+        nombreColumna tipo características,  
+        nombreColumna2 tipo características,   
+        nombreColumna3 tipo características,  
+        nombreColumna4 tipo características 
     );
 
 
 > Ejemplo práctico: 
 
-    CREATE TABLE productos_apple  
+    CREATE TABLE personas  
     (  
-        id smallint unsigned,  
-        apellido varchar(45),  
-        nombre varchar(45),  
-        dni int unsigned,  
-        alta date
+        id smallint unsigned auto_increment primary key not null,  
+        apellido varchar(45) not null,  
+        nombre varchar(45) not null,  
+        dni int unsigned unique not null,  
+        alta date not null
     );
 
 
+    CREATE TABLE productos_apple  
+    (  
+        id tinyint unsigned auto_increment not null primary key,  
+        nombre varchar(45) unique not null,  
+        precio decimal( 7, 2 ) unsigned not null,  
+        stock smallint unsigned not null
+    );
