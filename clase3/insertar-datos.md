@@ -36,3 +36,18 @@
         ( apellido, nombre, dni, alta )  
       VALUES  
         ( 'González', 'Mónica', 36520147, '2005-09-30' );  
+
+
+## Sintáxis simplificada (NO se mencinan las columnas)
+
+> Sintáxis:
+
+    INSERT INTO nombreTabla
+      VALUES   
+        ( valor1, valor2, valor3, valor4 );  
+
+> Ejemplo práctico:
+
+    INSERT INTO personas  
+      VALUES
+        ( DEFAULT, 'Martínez', 'Vanesa', 35741951, '2007-11-02' );  
